@@ -386,33 +386,33 @@ function find_piece_positions(board::Board, ::Type{T}, color::Color)::Vector{Pos
     positions
 end
 
-"Checks if a position has a clear path to the opposing king"
-function checks_king(board::Board, pos::position)
+# "Checks if a position has a clear path to the opposing king"
+# function checks_king(board::Board, pos::position)
+# 
+# end
 
-end
-
-"Check if King is in check"
-function incheck(board::Board)::Bool
-    # find kings
-    vec_pos = find_piece_positions(board, King)
-    white_piece_pos = find_piece_positions(board, Piece, White)
-    black_piece_pos = find_piece_positions(board, Piece, Black)
-    # for each king
-    for king_pos in vec_pos
-        king = board[king_pos].piece
-        if iswhite(king)
-            # iterate over black pieces
-            for pos in black_piece_pos
-                checks_king(board, pos)
-            end
-        else
-        end
-
-    end
-    # iterate over other color's pieces
-    # check if a piece has a clear path to king
-    true
-end
+# "Check if King is in check"
+# function incheck(board::Board)::Bool
+#     # find kings
+#     vec_pos = find_piece_positions(board, King)
+#     white_piece_pos = find_piece_positions(board, Piece, White)
+#     black_piece_pos = find_piece_positions(board, Piece, Black)
+#     # for each king
+#     for king_pos in vec_pos
+#         king = board[king_pos].piece
+#         if iswhite(king)
+#             # iterate over black pieces
+##              for pos in black_piece_pos
+#                checks_king(board, pos)
+#            end
+#        else
+#        end
+# 
+#     end
+# iterate over other color's pieces
+# check if a piece has a clear path to king
+#    true
+# end
 
 "Evaluates the board for check/checkmate"
 function validate_board(board::Board)::Bool
