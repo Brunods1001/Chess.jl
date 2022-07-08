@@ -2,3 +2,9 @@ name = "Chess"
 uuid = "70c27136-16b4-4562-add3-87315a646ec7"
 authors = ["Brunods10 <brunods1001@gmail.com>"]
 version = "0.1.0"
+
+[deps]
+Debugger = "31a5f54b-26ea-5ae9-a837-f05ce5417438"
+Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
+StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
